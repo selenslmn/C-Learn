@@ -8,7 +8,7 @@ int main(void)
 	int d = 100;
 	double e = 12000.345678;
 
-	printf("%d - %c\n", a, a);		/* 97 - a */
+	printf("%d - %c\n", a, a);			/* 97 - a */
 	printf("%f\n", b);				/* 12.450000 */
 	printf("%u\n", c);				/* 32503456 */
 	printf("%x\n", d);				/* 64 */
