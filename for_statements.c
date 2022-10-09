@@ -120,7 +120,7 @@ int main(void)
 	scanf("%d", &n);
 
 	for (i = 1; i <= n; ++i) {
-		for (k = 0; k < i; ++k)
+		for (k = 0; k < i; ++k)		/* nested loop, print as many star patterns as the number of n */
 			putchar('*');
 		putchar('\n');
 	}
