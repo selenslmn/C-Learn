@@ -248,7 +248,9 @@ int main(void)
 			printf("Bir deger daha giriniz:");
 			scanf("%d", &b);
 			if (b > 0) {
-				case 2:
+				case 2:							/* In C, the case sections do not have to be inside the switch block. 
+												A case section can be somewhere inside another case section. 
+													Languages such as C# and Java do not have such a feature. */
 					printf("islemler devam ediyor..\n");
 					break;
 			}
