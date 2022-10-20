@@ -11,29 +11,29 @@ long total_days(int day, int month, int year)
 
 	      switch (month - 1) {
 	              case 12:			        /* unreachable */
-		                    tdays += 31;
+		              tdays += 31;
 	              case 11:
-		                    tdays += 30;
+		              tdays += 30;
 	              case 10:
-	                     	tdays += 31;
+	                      tdays += 31;
 	              case 9:
-		                   tdays += 30;
+		             tdays += 30;
 	              case 8:
-		                   tdays += 31;
+		             tdays += 31;
 	              case 7:
-		                   tdays += 31;
+		             tdays += 31;
 	              case 6:
-		                   tdays += 30;
+		             tdays += 30;
 	              case 5:
 	                     tdays += 31;
 	              case 4:
-		                   tdays += 30;
+		             tdays += 30;
 	              case 3:
-		                   tdays += 31;
+		             tdays += 31;
 	              case 2:
-		                   tdays += isleap(year) ? 29 : 28;
+		             tdays += isleap(year) ? 29 : 28;
 	              case 1:
-		                   tdays += 31;
+		             tdays += 31;
 	      }
 
 	      tdays += day;
@@ -49,26 +49,26 @@ void disp_day(int day, int month, int year)
 
 	      switch (tdays % 7) {
 	              case 0:
-		                    printf("Pazar\n");
-		                    break;
+		             printf("Pazar\n");
+		             break;
 	              case 1:
-		                    printf("Pazartesi\n");
-		                    break;
+		             printf("Pazartesi\n");
+		             break;
 	              case 2:
-		                    printf("Sali\n");
-		                    break;
+		             printf("Sali\n");
+		             break;
 	              case 3:
-		                    printf("Carsamba\n");
-		                    break;
+		             printf("Carsamba\n");
+		             break;
 	              case 4:
-		                    printf("Persembe\n");
-	                    	break;
+		             printf("Persembe\n");
+	                     break;
 	              case 5:
-		                    printf("Cuma\n");
-		                    break;
+		             printf("Cuma\n");
+		             break;
 	              case 6:
-		                    printf("Cumartesi\n");
-		                    break;
+		             printf("Cumartesi\n");
+		             break;
 	      }
 }
 
