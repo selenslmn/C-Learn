@@ -45,3 +45,31 @@ int main(void)
 
     return 0;
 }
+
+------------------------------------------------------------------------------------------------
+    
+#include <stdio.h>
+
+int *getmax_addr(int *pi, size_t size);
+
+int main(void)
+{
+	int a[10] = {34, 23, 12, 67, 25, 12, 89, 11, 26, 67};
+	int *pi;
+
+	pi = getmax_addr(a, 10);
+	printf("%d\n", *pi);
+
+	return 0;
+}
+
+int *getmax_addr(int *pi, size_t size)
+{
+	int *pmax = &pi[0];
+
+	for (size_t i = 1; i < size; ++i)
+		if (pi[i] > *pmax) 
+			pmax = &pi[i];
+
+	return pmax;
+}
