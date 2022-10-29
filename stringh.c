@@ -284,3 +284,84 @@ char *mystrrchr(char *str, int ch)               /* if we write the function our
 
 	return ch == '\0' ? str : result;	
 }
+
+--------------------------------------------------------------------------------------------------------------------
+
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+	char passwd[] = "bluemoon";
+	char s[1024];
+
+	printf("Enter password:");
+	gets(s);
+
+	if (!strcmp(s, passwd))				/* compare two posts */
+		printf("Ok\n");
+	else
+		printf("Incorrect password!..\n");
+
+	return 0;
+}	
+
+----------------------------------------------------------------------------------------------------
+
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+	char passwd[] = "bluemoon";
+	char s[1024];
+	int i;
+
+	for (i = 0; i < 3; ++i) {
+		printf("Enter password:");
+		gets(s);
+		if (!strcmp(s, passwd)) 
+			break;
+		printf("Incorrect password!..\n");
+	}
+
+	if (i == 3)
+		printf("Sorry you must wait 5 minutes to try again...\n");
+	else
+		printf("Ok\n");
+
+	return 0;
+}
+
+----------------------------------------------------------------------------------------
+	
+#include <stdio.h>
+
+int mystrcmp(char *s1, char *s2);
+
+int main(void)
+{
+	char passwd[] = "maviay";
+	char s[1024];
+
+	printf("Enter password:");
+	gets(s);
+
+	if (!mystrcmp(s, passwd))
+		printf("Ok\n");
+	else
+		printf("Incorrect password!..\n");
+
+	return 0;
+}
+
+int mystrcmp(char *s1, char *s2)			/* if we write the function ourselves */
+{
+	while (*s1 == *s2) {
+		if (*s1 == '\0')
+			return 0;
+		++s1;
+		++s2;
+	}
+	return *s1 - *s2;
+}
