@@ -94,3 +94,36 @@ int main(void)
 
 --------------------------------------------------------------------------------------------------------------------
   
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+	int a[10];
+
+	memset(a, 0, 10 * 4);				/* filling a certain byte amount of a certain from a certain address */
+
+	for (int i = 0; i < 10; ++i)
+		printf("%d ", a[i]);			/* 0 0 0 0 0 0 0 0 0 0 */
+	printf("\n");
+
+	return 0;
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------
+	
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+	int a[5] = {1, 2, 3, 4, 5};
+	int b[5] = {1, 2, 3, 4, 5};
+	int result;
+
+	result = memcmp(a, b, 5 * 4);			/* compares bytes */
+	
+	printf(result ? "the contents are not the same\n" : "the contents are the same\n");
+
+	return 0;
+}
