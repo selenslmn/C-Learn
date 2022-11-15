@@ -365,3 +365,23 @@ int mystrcmp(char *s1, char *s2)			/* if we write the function ourselves */
 	}
 	return *s1 - *s2;
 }
+
+--------------------------------------------------------------------------------------------------------------------
+
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+	char s[] = "this is a test yes!";
+	char k[] = "test";
+	char *str;
+
+	str = strstr(s, k);				/* Searches for another text within a text */
+	if (str != NULL)
+		puts(str);		/* test yes! */
+	else
+		printf("cannot find!\n");
+
+	return 0;
+}
