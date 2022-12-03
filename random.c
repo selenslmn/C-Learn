@@ -92,3 +92,33 @@ int main(void)
 
 	return 0;
 }
+
+---------------------------------------------------------------------------------------------------------------------------
+  
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main(void)
+{
+	int val;
+	char *names[5] = {"ali", "veli", "selami", "ayse", "fatma"};
+	char *temp;
+
+	srand(time(NULL));
+
+	val = rand() % 5;
+	temp = names[val];
+	names[val] = names[4];
+	names[4] = temp;
+	
+	val = rand() % 4;
+	temp = names[val];
+	names[val] = names[3];
+	names[3] = temp;
+
+	printf("%s %s\n", names[3], names[4]);		/* Picking 2 people randomly from 5 people */
+	
+	return 0;
+}
+ 
