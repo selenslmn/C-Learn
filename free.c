@@ -9,7 +9,7 @@ int main(void)
         fprintf(stderr, "cannot allocate memory!..\n");
         exit(EXIT_FAILURE);
     }
-    printf("Bir yazi giriniz:");
+    printf("Enter a text:");
     gets(str);
 
     puts(str);
@@ -33,7 +33,7 @@ int main(void)
             fprintf(stderr, "cannot allocate memory!..\n");
             exit(EXIT_FAILURE);
         }
-        printf("Bir isim giriniz:");
+        printf("Enter a name:");
         gets(names[i]);
     }
 
