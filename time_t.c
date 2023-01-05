@@ -1,3 +1,5 @@
+/* Expressing the time elapsed from a given origin as an integer */
+
 #include <stdio.h>
 #include <time.h>
 
