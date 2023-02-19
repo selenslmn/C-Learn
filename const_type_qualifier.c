@@ -71,3 +71,42 @@
   int a;
   const int * const pi = &a, b = 20;    /* pi, where it points and b are const */    
 /*--------------------------------------------------------------------------------------------------*/ 
+	const char s[] = "ankara";
+
+	myputs(s);		/* invalid */
+
+	/* BUT */
+	
+	void myputs(const char *str);
+
+	const char s[] = "ankara";
+
+	myputs(s);		/* valid */
+/*--------------------------------------------------------------------------------------------------*/ 
+	char *strcpy(char *dest, const char *source);
+
+	char *strchr(const char *str, int ch);
+
+	double mean(const double *pd, size_t size);
+
+	void getdate(struct DATE *pdate);
+	void setdate(const DATE *pdate);
+/*--------------------------------------------------------------------------------------------------*/ 
+
+#include <stdio.h>
+
+typedef const int *PI;
+
+int main()
+{
+    int a = 10, b = 20;
+    PI pi = &a;
+
+    pi = &b;        /* valid, where pi points are const */
+    printf("%d\n", *pi);
+    *pi = 20;       /* invalid! where pi points are const! */
+
+    return 0;
+}
+
+/*--------------------------------------------------------------------------------------------------*/ 
